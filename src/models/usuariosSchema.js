@@ -18,6 +18,11 @@ const usuariosSchema = mongoose.Schema({
     type: Date,
     required: true,
   },
+  CONTACTO: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "contactos",
+    required: false,
+  },
 });
 
 

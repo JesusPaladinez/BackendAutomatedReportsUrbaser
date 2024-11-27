@@ -45,6 +45,11 @@ const serviciosSchema = mongoose.Schema({
     min: 0,
     max: 34,
   },
+  PAGOS: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "pagos",
+    required: false,
+  },
 });
 
 

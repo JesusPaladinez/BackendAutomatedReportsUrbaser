@@ -79,6 +79,26 @@ const prediosSchema = mongoose.Schema({
     min: 0,
     max: 1,
   },
+  USUARIO: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "usuarios",
+    required: false,
+  },
+  UBICACION: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "ubicaciones",
+    required: false,
+  },
+  DIMENSIONES: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "dimesiones",
+    required: false,
+  },
+  SERVICIOS: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "servicios",
+    required: false,
+  },
 });
 
 

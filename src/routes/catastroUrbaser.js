@@ -47,7 +47,7 @@ router.put("/catastroUrbaser/:id", async (req, res) => {
     const { id } = req.params;
     try {
         const data = await catastroUrbaserSchema.updateOne({ _id: id }, { $set: req.body});
-        if (data.nModified > 0) {
+        if (data.modifiedCount > 0) {
             res.status(200).json({ message: "Dato actualizado con éxito.", data });
         } else {
             res.status(404).json({ message: "No se encontró el dato." });
@@ -66,7 +66,7 @@ router.delete("/catastroUrbaser/:id", async (req, res) => {
         if (data.deleteCount > 0) {
             res.status(204).json({ message: "Dato eliminado con exito." });
         } else { 
-            res.status(404).json({ message: "No se encontró el dato a eliminar." });
+            res.status(404).json({ message: "No se encontró el dato que desea eliminar." });
         }
     } catch (error) {
         res.status(500).json({ message: "Error al eliminar el dato.", error });

@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dataRoutes = require("./routes/catastroUrbaser");
 require("dotenv").config();
- 
+
 
 const app = express();
 const port = process.env.PORT || 9000;
