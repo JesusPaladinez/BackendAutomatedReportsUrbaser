@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const contactosSchema = require("../models/contactosSchema");
+const contactosSchema = require("../models/contactos-schema");
 
 
 router.get("/contactos", async (req, res) => {
